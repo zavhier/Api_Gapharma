@@ -1,0 +1,2 @@
+C:\JM\_GAS_PROD\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csprojAssemblyReference.cache
+C:\JM\_GAS_PROD\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csproj.CoreCompileInputs.cache

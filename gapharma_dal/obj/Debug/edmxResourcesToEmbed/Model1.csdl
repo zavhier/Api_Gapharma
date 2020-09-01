@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gapharmaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CABECERA_DOCUMENTO">
+    <Key>
+      <PropertyRef Name="CABECERA_DOCUMENTO_ID" />
+    </Key>
+    <Property Name="CABECERA_DOCUMENTO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FECHA_EMISION" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FECHA_ENVIO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FECHA_RETIRO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CLIENTE_ID" Type="Int32" Nullable="false" />
+    <Property Name="DESTINATARIO_ID" Type="Int32" Nullable="false" />
+    <Property Name="ESTADO_ID" Type="Int32" Nullable="false" />
+    <Property Name="SERVICIO_ID" Type="Int32" Nullable="false" />
+    <Property Name="EMPRESA_ID" Type="Int32" Nullable="false" />
+    <Property Name="TIPO_DOCUMENTO_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="CLIENTE_ID" />
+    </Key>
+    <Property Name="CLIENTE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RAZONSOCIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ESTADO_ID" Type="Int32" />
+    <Property Name="USUARIO_ID" Type="Int32" />
+    <Property Name="EMPRESA_ID" Type="Int32" />
+    <Property Name="PERSONA_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DESTINATARIO">
+    <Key>
+      <PropertyRef Name="DESTINATARIO_ID" />
+    </Key>
+    <Property Name="DESTINATARIO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RAZON_SOCIAL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECCION_ENTREGA" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_POSTAL" Type="Int32" />
+    <Property Name="CLIENTE_ID" Type="Int32" />
+    <Property Name="PERSONA_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_DOCUMENTO">
+    <Key>
+      <PropertyRef Name="DETALLE_DOCUMENTO_ID" />
+    </Key>
+    <Property Name="DETALLE_DOCUMENTO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CABECERA_DOCUMENTO_ID" Type="Int32" Nullable="false" />
+    <Property Name="PAQUETE_ID" Type="Int32" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="EMPLEADO_ID" />
+    </Key>
+    <Property Name="EMPLEADO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RAZON_SOCIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AREA_ID" Type="Int32" />
+    <Property Name="USUARIO_ID" Type="Int32" />
+    <Property Name="HABILITADO" Type="Int32" Nullable="false" />
+    <Property Name="EMPRESA_ID" Type="Int32" />
+    <Property Name="PERSONA_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPRESA">
+    <Key>
+      <PropertyRef Name="EMPRESA_ID" />
+    </Key>
+    <Property Name="EMPRESA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RAZON_SOCIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CUIL" Type="Int32" Nullable="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO1" Type="Int32" Nullable="false" />
+    <Property Name="TELEFONO2" Type="Int32" Nullable="false" />
+    <Property Name="LOCALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO">
+    <Key>
+      <PropertyRef Name="ESTADO_ID" />
+    </Key>
+    <Property Name="ESTADO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TIPO_ESTADO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HOJA_DE_RUTA">
+    <Key>
+      <PropertyRef Name="HOJA_DE_RUTA_ID" />
+    </Key>
+    <Property Name="HOJA_DE_RUTA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TRANSPORTISTA_ID" Type="Int32" />
+    <Property Name="TIPO_DE_CARGA_ID" Type="Int32" />
+    <Property Name="VEHICULO_ID" Type="Int32" />
+    <Property Name="RUTA_ID" Type="Int32" />
+    <Property Name="ESTADO_ID" Type="Int32" />
+    <Property Name="FECHA" Type="DateTime" Precision="0" />
+    <Property Name="HORA_INICIO" Type="DateTime" Precision="3" />
+    <Property Name="HORA_FIN" Type="DateTime" Precision="3" />
+    <Property Name="KM_INICIO" Type="Double" />
+    <Property Name="KM_FIN" Type="Double" />
+    <Property Name="KM_RECORRIDOS" Type="Double" />
+    <Property Name="ORDEN_DEL_ENVIO" Type="Int32" />
+  </EntityType>
+  <EntityType Name="LUGAR_DE_ENTREGA">
+    <Key>
+      <PropertyRef Name="LUGAR_ENTREGA_ID" />
+    </Key>
+    <Property Name="LUGAR_ENTREGA_ID" Type="Int32" Nullable="false" />
+    <Property Name="CABECERA_DOCUMENTO_ID" Type="Int32" />
+    <Property Name="FECHA" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="MARCA_MODELO">
+    <Key>
+      <PropertyRef Name="MARCA_MODELO_ID" />
+    </Key>
+    <Property Name="MARCA_MODELO_ID" Type="Int32" Nullable="false" />
+    <Property Name="MARCA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODELO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PAQUETE">
+    <Key>
+      <PropertyRef Name="PAQUETE_ID" />
+    </Key>
+    <Property Name="PAQUETE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PESO" Type="Double" Nullable="false" />
+    <Property Name="ALTO" Type="Double" Nullable="false" />
+    <Property Name="ANCHO" Type="Double" Nullable="false" />
+    <Property Name="PROFUNDIDAD" Type="Double" Nullable="false" />
+    <Property Name="TIPO_DE_CARGA_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PERMISO">
+    <Key>
+      <PropertyRef Name="PERMISO_ID" />
+    </Key>
+    <Property Name="PERMISO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="PERSONA_ID" />
+    </Key>
+    <Property Name="PERSONA_ID" Type="Int32" Nullable="false" />
+    <Property Name="DNI" Type="Int32" />
+    <Property Name="CUIL" Type="Int32" />
+    <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO_1" Type="Int32" />
+    <Property Name="TELEFONO_2" Type="Int32" />
+    <Property Name="CODIGO_POSTAL" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RUTA">
+    <Key>
+      <PropertyRef Name="RUTA_ID" />
+    </Key>
+    <Property Name="RUTA_ID" Type="Int32" Nullable="false" />
+    <Property Name="LUGAR_ENTREGA_ID" Type="Int32" />
+    <Property Name="ESTADO_ID" Type="Int32" />
+    <Property Name="HOJA_DE_RUTA_ID" Type="Int32" Nullable="false" />
+    <Property Name="TIPO_RUTA_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SERVICIO">
+    <Key>
+      <PropertyRef Name="SERVICIO_ID" />
+    </Key>
+    <Property Name="SERVICIO_ID" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ESTADO_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TIPO_DOCUMENTO">
+    <Key>
+      <PropertyRef Name="TIPO_DOCUMENTO_ID" />
+    </Key>
+    <Property Name="TIPO_DOCUMENTO_ID" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPICION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AFECTA_STOCK" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TIPO_VEHICULO">
+    <Key>
+      <PropertyRef Name="TIPO_VEHICULO_ID" />
+    </Key>
+    <Property Name="TIPO_VEHICULO_ID" Type="Int32" Nullable="false" />
+    <Property Name="TIPO_VEHICULO1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TRANSPORTISTA">
+    <Key>
+      <PropertyRef Name="TRANSPORTISTA_ID" />
+    </Key>
+    <Property Name="TRANSPORTISTA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMPLEADO_ID" Type="Int32" />
+    <Property Name="NUM_LIC_CONVENCIONAL" Type="Int32" Nullable="false" />
+    <Property Name="FECHA_VENCIMIENTO_LIC_CONVENCIONAL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NUM_LIC_CAMIONEROS" Type="Int32" Nullable="false" />
+    <Property Name="FECHA_VENCIMIENTO_LIC_CAMIONEROS" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VEHICULO_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="USUARIO_ID" />
+    </Key>
+    <Property Name="USUARIO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HABILITADO" Type="Int32" />
+    <Property Name="USUARIO_ROL_ID" Type="Int32" />
+    <Property Name="FECHA_ALTA" Type="DateTime" Precision="3" />
+    <Property Name="ERROR_CONTRASEÑA" Type="Int32" />
+    <Property Name="EMPRESA_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VEHICULO">
+    <Key>
+      <PropertyRef Name="VEHICULO_ID" />
+    </Key>
+    <Property Name="VEHICULO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TIPO_VEHICULO_ID" Type="Int32" />
+    <Property Name="MARCA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODELO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CAPACIDAD_TOTAL" Type="Double" />
+    <Property Name="PATENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KM_ACTUAL" Type="Double" />
+    <Property Name="ESTADO_ID" Type="Int32" />
+    <Property Name="ZONAS_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BITACORA">
+    <Key>
+      <PropertyRef Name="BITACORA_ID" />
+    </Key>
+    <Property Name="BITACORA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USUARIO_ID" Type="Int32" />
+    <Property Name="FECHA" Type="DateTime" Precision="3" />
+    <Property Name="MENSAJE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CLIENTE_DESTINATARIO">
+    <Key>
+      <PropertyRef Name="CLIENTE_ID" />
+      <PropertyRef Name="DESTINATARIO_ID" />
+    </Key>
+    <Property Name="CLIENTE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESTINATARIO_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERMISO_USUARIO">
+    <Key>
+      <PropertyRef Name="PERMISO_ID" />
+      <PropertyRef Name="USUARIO_ID" />
+    </Key>
+    <Property Name="PERMISO_ID" Type="Int32" Nullable="false" />
+    <Property Name="USUARIO_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_DE_CARGA">
+    <Key>
+      <PropertyRef Name="TIPO_DE_CARGA_ID" />
+    </Key>
+    <Property Name="TIPO_DE_CARGA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REFRIGERADO" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TIPO_RUTA">
+    <Key>
+      <PropertyRef Name="TIPO_RUTA_ID" />
+    </Key>
+    <Property Name="TIPO_RUTA_ID" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZONA">
+    <Key>
+      <PropertyRef Name="ZONAS_ID" />
+    </Key>
+    <Property Name="ZONAS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_POSTAL" Type="Int32" />
+    <Property Name="LOCALIDAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DISTRITO_ID" Type="Int32" />
+    <Property Name="PARTIDO_ID" Type="Int32" />
+    <Property Name="DESCRIPCION_PARTIDO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HABILITADO" Type="Boolean" />
+    <Property Name="ZONA_UNIFICADA" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="gapharmaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CABECERA_DOCUMENTO" EntityType="Self.CABECERA_DOCUMENTO" />
+    <EntitySet Name="CLIENTEs" EntityType="Self.CLIENTE" />
+    <EntitySet Name="DESTINATARIOs" EntityType="Self.DESTINATARIO" />
+    <EntitySet Name="DETALLE_DOCUMENTO" EntityType="Self.DETALLE_DOCUMENTO" />
+    <EntitySet Name="EMPLEADOes" EntityType="Self.EMPLEADO" />
+    <EntitySet Name="EMPRESAs" EntityType="Self.EMPRESA" />
+    <EntitySet Name="ESTADOes" EntityType="Self.ESTADO" />
+    <EntitySet Name="HOJA_DE_RUTA" EntityType="Self.HOJA_DE_RUTA" />
+    <EntitySet Name="LUGAR_DE_ENTREGA" EntityType="Self.LUGAR_DE_ENTREGA" />
+    <EntitySet Name="MARCA_MODELO" EntityType="Self.MARCA_MODELO" />
+    <EntitySet Name="PAQUETEs" EntityType="Self.PAQUETE" />
+    <EntitySet Name="PERMISOes" EntityType="Self.PERMISO" />
+    <EntitySet Name="PERSONAs" EntityType="Self.PERSONA" />
+    <EntitySet Name="RUTAs" EntityType="Self.RUTA" />
+    <EntitySet Name="SERVICIOs" EntityType="Self.SERVICIO" />
+    <EntitySet Name="TIPO_DOCUMENTO" EntityType="Self.TIPO_DOCUMENTO" />
+    <EntitySet Name="TIPO_VEHICULO" EntityType="Self.TIPO_VEHICULO" />
+    <EntitySet Name="TRANSPORTISTAs" EntityType="Self.TRANSPORTISTA" />
+    <EntitySet Name="USUARIOs" EntityType="Self.USUARIO" />
+    <EntitySet Name="VEHICULOes" EntityType="Self.VEHICULO" />
+    <EntitySet Name="BITACORAs" EntityType="Self.BITACORA" />
+    <EntitySet Name="CLIENTE_DESTINATARIO" EntityType="Self.CLIENTE_DESTINATARIO" />
+    <EntitySet Name="PERMISO_USUARIO" EntityType="Self.PERMISO_USUARIO" />
+    <EntitySet Name="TIPO_DE_CARGA" EntityType="Self.TIPO_DE_CARGA" />
+    <EntitySet Name="TIPO_RUTA" EntityType="Self.TIPO_RUTA" />
+    <EntitySet Name="ZONAS" EntityType="Self.ZONA" />
+  </EntityContainer>
+</Schema>

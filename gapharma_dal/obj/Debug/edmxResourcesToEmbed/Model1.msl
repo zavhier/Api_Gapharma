@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gapharmaModelStoreContainer" CdmEntityContainer="gapharmaEntities">
+    <EntitySetMapping Name="CABECERA_DOCUMENTO">
+      <EntityTypeMapping TypeName="gapharmaModel.CABECERA_DOCUMENTO">
+        <MappingFragment StoreEntitySet="CABECERA_DOCUMENTO">
+          <ScalarProperty Name="CABECERA_DOCUMENTO_ID" ColumnName="CABECERA_DOCUMENTO_ID" />
+          <ScalarProperty Name="FECHA_EMISION" ColumnName="FECHA_EMISION" />
+          <ScalarProperty Name="FECHA_ENVIO" ColumnName="FECHA_ENVIO" />
+          <ScalarProperty Name="FECHA_RETIRO" ColumnName="FECHA_RETIRO" />
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="DESTINATARIO_ID" ColumnName="DESTINATARIO_ID" />
+          <ScalarProperty Name="ESTADO_ID" ColumnName="ESTADO_ID" />
+          <ScalarProperty Name="SERVICIO_ID" ColumnName="SERVICIO_ID" />
+          <ScalarProperty Name="EMPRESA_ID" ColumnName="EMPRESA_ID" />
+          <ScalarProperty Name="TIPO_DOCUMENTO_ID" ColumnName="TIPO_DOCUMENTO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTEs">
+      <EntityTypeMapping TypeName="gapharmaModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="RAZONSOCIAL" ColumnName="RAZONSOCIAL" />
+          <ScalarProperty Name="ESTADO_ID" ColumnName="ESTADO_ID" />
+          <ScalarProperty Name="USUARIO_ID" ColumnName="USUARIO_ID" />
+          <ScalarProperty Name="EMPRESA_ID" ColumnName="EMPRESA_ID" />
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESTINATARIOs">
+      <EntityTypeMapping TypeName="gapharmaModel.DESTINATARIO">
+        <MappingFragment StoreEntitySet="DESTINATARIO">
+          <ScalarProperty Name="DESTINATARIO_ID" ColumnName="DESTINATARIO_ID" />
+          <ScalarProperty Name="RAZON_SOCIAL" ColumnName="RAZON_SOCIAL" />
+          <ScalarProperty Name="DIRECCION_ENTREGA" ColumnName="DIRECCION_ENTREGA" />
+          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_DOCUMENTO">
+      <EntityTypeMapping TypeName="gapharmaModel.DETALLE_DOCUMENTO">
+        <MappingFragment StoreEntitySet="DETALLE_DOCUMENTO">
+          <ScalarProperty Name="DETALLE_DOCUMENTO_ID" ColumnName="DETALLE_DOCUMENTO_ID" />
+          <ScalarProperty Name="CABECERA_DOCUMENTO_ID" ColumnName="CABECERA_DOCUMENTO_ID" />
+          <ScalarProperty Name="PAQUETE_ID" ColumnName="PAQUETE_ID" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADOes">
+      <EntityTypeMapping TypeName="gapharmaModel.EMPLEADO">
+        <MappingFragment StoreEntitySet="EMPLEADO">
+          <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
+          <ScalarProperty Name="RAZON_SOCIAL" ColumnName="RAZON_SOCIAL" />
+          <ScalarProperty Name="AREA_ID" ColumnName="AREA_ID" />
+          <ScalarProperty Name="USUARIO_ID" ColumnName="USUARIO_ID" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+          <ScalarProperty Name="EMPRESA_ID" ColumnName="EMPRESA_ID" />
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESAs">
+      <EntityTypeMapping TypeName="gapharmaModel.EMPRESA">
+        <MappingFragment StoreEntitySet="EMPRESA">
+          <ScalarProperty Name="EMPRESA_ID" ColumnName="EMPRESA_ID" />
+          <ScalarProperty Name="RAZON_SOCIAL" ColumnName="RAZON_SOCIAL" />
+          <ScalarProperty Name="CUIL" ColumnName="CUIL" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO1" ColumnName="TELEFONO1" />
+          <ScalarProperty Name="TELEFONO2" ColumnName="TELEFONO2" />
+          <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOes">
+      <EntityTypeMapping TypeName="gapharmaModel.ESTADO">
+        <MappingFragment StoreEntitySet="ESTADO">
+          <ScalarProperty Name="ESTADO_ID" ColumnName="ESTADO_ID" />
+          <ScalarProperty Name="TIPO_ESTADO" ColumnName="TIPO_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOJA_DE_RUTA">
+      <EntityTypeMapping TypeName="gapharmaModel.HOJA_DE_RUTA">
+        <MappingFragment StoreEntitySet="HOJA_DE_RUTA">
+          <ScalarProperty Name="HOJA_DE_RUTA_ID" ColumnName="HOJA_DE_RUTA_ID" />
+          <ScalarProperty Name="TRANSPORTISTA_ID" ColumnName="TRANSPORTISTA_ID" />
+          <ScalarProperty Name="TIPO_DE_CARGA_ID" ColumnName="TIPO_DE_CARGA_ID" />
+          <ScalarProperty Name="VEHICULO_ID" ColumnName="VEHICULO_ID" />
+          <ScalarProperty Name="RUTA_ID" ColumnName="RUTA_ID" />
+          <ScalarProperty Name="ESTADO_ID" ColumnName="ESTADO_ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="HORA_INICIO" ColumnName="HORA_INICIO" />
+          <ScalarProperty Name="HORA_FIN" ColumnName="HORA_FIN" />
+          <ScalarProperty Name="KM_INICIO" ColumnName="KM_INICIO" />
+          <ScalarProperty Name="KM_FIN" ColumnName="KM_FIN" />
+          <ScalarProperty Name="KM_RECORRIDOS" ColumnName="KM_RECORRIDOS" />
+          <ScalarProperty Name="ORDEN_DEL_ENVIO" ColumnName="ORDEN_DEL_ENVIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LUGAR_DE_ENTREGA">
+      <EntityTypeMapping TypeName="gapharmaModel.LUGAR_DE_ENTREGA">
+        <MappingFragment StoreEntitySet="LUGAR_DE_ENTREGA">
+          <ScalarProperty Name="LUGAR_ENTREGA_ID" ColumnName="LUGAR_ENTREGA_ID" />
+          <ScalarProperty Name="CABECERA_DOCUMENTO_ID" ColumnName="CABECERA_DOCUMENTO_ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARCA_MODELO">
+      <EntityTypeMapping TypeName="gapharmaModel.MARCA_MODELO">
+        <MappingFragment StoreEntitySet="MARCA_MODELO">
+          <ScalarProperty Name="MARCA_MODELO_ID" ColumnName="MARCA_MODELO_ID" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAQUETEs">
+      <EntityTypeMapping TypeName="gapharmaModel.PAQUETE">
+        <MappingFragment StoreEntitySet="PAQUETE">
+          <ScalarProperty Name="PAQUETE_ID" ColumnName="PAQUETE_ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PESO" ColumnName="PESO" />
+          <ScalarProperty Name="ALTO" ColumnName="ALTO" />
+          <ScalarProperty Name="ANCHO" ColumnName="ANCHO" />
+          <ScalarProperty Name="PROFUNDIDAD" ColumnName="PROFUNDIDAD" />
+          <ScalarProperty Name="TIPO_DE_CARGA_ID" ColumnName="TIPO_DE_CARGA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOes">
+      <EntityTypeMapping TypeName="gapharmaModel.PERMISO">
+        <MappingFragment StoreEntitySet="PERMISO">
+          <ScalarProperty Name="PERMISO_ID" ColumnName="PERMISO_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONAs">
+      <EntityTypeMapping TypeName="gapharmaModel.PERSONA">
+        <MappingFragment StoreEntitySet="PERSONA">
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="CUIL" ColumnName="CUIL" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TELEFONO_1" ColumnName="TELEFONO_1" />
+          <ScalarProperty Name="TELEFONO_2" ColumnName="TELEFONO_2" />
+          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RUTAs">
+      <EntityTypeMapping TypeName="gapharmaModel.RUTA">
+        <MappingFragment StoreEntitySet="RUTA">
+          <ScalarProperty Name="RUTA_ID" ColumnName="RUTA_ID" />
+          <ScalarProperty Name="LUGAR_ENTREGA_ID" ColumnName="LUGAR_ENTREGA_ID" />
+          <ScalarProperty Name="ESTADO_ID" ColumnName="ESTADO_ID" />
+          <ScalarProperty Name="HOJA_DE_RUTA_ID" ColumnName="HOJA_DE_RUTA_ID" />
+          <ScalarProperty Name="TIPO_RUTA_ID" ColumnName="TIPO_RUTA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIOs">
+      <EntityTypeMapping TypeName="gapharmaModel.SERVICIO">
+        <MappingFragment StoreEntitySet="SERVICIO">
+          <ScalarProperty Name="SERVICIO_ID" ColumnName="SERVICIO_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ESTADO_ID" ColumnName="ESTADO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_DOCUMENTO">
+      <EntityTypeMapping TypeName="gapharmaModel.TIPO_DOCUMENTO">
+        <MappingFragment StoreEntitySet="TIPO_DOCUMENTO">
+          <ScalarProperty Name="TIPO_DOCUMENTO_ID" ColumnName="TIPO_DOCUMENTO_ID" />
+          <ScalarProperty Name="DESCRIPICION" ColumnName="DESCRIPICION" />
+          <ScalarProperty Name="AFECTA_STOCK" ColumnName="AFECTA_STOCK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_VEHICULO">
+      <EntityTypeMapping TypeName="gapharmaModel.TIPO_VEHICULO">
+        <MappingFragment StoreEntitySet="TIPO_VEHICULO">
+          <ScalarProperty Name="TIPO_VEHICULO_ID" ColumnName="TIPO_VEHICULO_ID" />
+          <ScalarProperty Name="TIPO_VEHICULO1" ColumnName="TIPO_VEHICULO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSPORTISTAs">
+      <EntityTypeMapping TypeName="gapharmaModel.TRANSPORTISTA">
+        <MappingFragment StoreEntitySet="TRANSPORTISTA">
+          <ScalarProperty Name="TRANSPORTISTA_ID" ColumnName="TRANSPORTISTA_ID" />
+          <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
+          <ScalarProperty Name="NUM_LIC_CONVENCIONAL" ColumnName="NUM_LIC_CONVENCIONAL" />
+          <ScalarProperty Name="FECHA_VENCIMIENTO_LIC_CONVENCIONAL" ColumnName="FECHA_VENCIMIENTO_LIC_CONVENCIONAL" />
+          <ScalarProperty Name="NUM_LIC_CAMIONEROS" ColumnName="NUM_LIC_CAMIONEROS" />
+          <ScalarProperty Name="FECHA_VENCIMIENTO_LIC_CAMIONEROS" ColumnName="FECHA_VENCIMIENTO_LIC_CAMIONEROS" />
+          <ScalarProperty Name="VEHICULO_ID" ColumnName="VEHICULO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOs">
+      <EntityTypeMapping TypeName="gapharmaModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="USUARIO_ID" ColumnName="USUARIO_ID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+          <ScalarProperty Name="USUARIO_ROL_ID" ColumnName="USUARIO_ROL_ID" />
+          <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+          <ScalarProperty Name="ERROR_CONTRASEÑA" ColumnName="ERROR_CONTRASEÑA" />
+          <ScalarProperty Name="EMPRESA_ID" ColumnName="EMPRESA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VEHICULOes">
+      <EntityTypeMapping TypeName="gapharmaModel.VEHICULO">
+        <MappingFragment StoreEntitySet="VEHICULO">
+          <ScalarProperty Name="VEHICULO_ID" ColumnName="VEHICULO_ID" />
+          <ScalarProperty Name="TIPO_VEHICULO_ID" ColumnName="TIPO_VEHICULO_ID" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+          <ScalarProperty Name="CAPACIDAD_TOTAL" ColumnName="CAPACIDAD_TOTAL" />
+          <ScalarProperty Name="PATENTE" ColumnName="PATENTE" />
+          <ScalarProperty Name="KM_ACTUAL" ColumnName="KM_ACTUAL" />
+          <ScalarProperty Name="ESTADO_ID" ColumnName="ESTADO_ID" />
+          <ScalarProperty Name="ZONAS_ID" ColumnName="ZONAS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BITACORAs">
+      <EntityTypeMapping TypeName="gapharmaModel.BITACORA">
+        <MappingFragment StoreEntitySet="BITACORA">
+          <ScalarProperty Name="BITACORA_ID" ColumnName="BITACORA_ID" />
+          <ScalarProperty Name="USUARIO_ID" ColumnName="USUARIO_ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MENSAJE" ColumnName="MENSAJE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE_DESTINATARIO">
+      <EntityTypeMapping TypeName="gapharmaModel.CLIENTE_DESTINATARIO">
+        <MappingFragment StoreEntitySet="CLIENTE_DESTINATARIO">
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="DESTINATARIO_ID" ColumnName="DESTINATARIO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISO_USUARIO">
+      <EntityTypeMapping TypeName="gapharmaModel.PERMISO_USUARIO">
+        <MappingFragment StoreEntitySet="PERMISO_USUARIO">
+          <ScalarProperty Name="PERMISO_ID" ColumnName="PERMISO_ID" />
+          <ScalarProperty Name="USUARIO_ID" ColumnName="USUARIO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_DE_CARGA">
+      <EntityTypeMapping TypeName="gapharmaModel.TIPO_DE_CARGA">
+        <MappingFragment StoreEntitySet="TIPO_DE_CARGA">
+          <ScalarProperty Name="TIPO_DE_CARGA_ID" ColumnName="TIPO_DE_CARGA_ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="REFRIGERADO" ColumnName="REFRIGERADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_RUTA">
+      <EntityTypeMapping TypeName="gapharmaModel.TIPO_RUTA">
+        <MappingFragment StoreEntitySet="TIPO_RUTA">
+          <ScalarProperty Name="TIPO_RUTA_ID" ColumnName="TIPO_RUTA_ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZONAS">
+      <EntityTypeMapping TypeName="gapharmaModel.ZONA">
+        <MappingFragment StoreEntitySet="ZONAS">
+          <ScalarProperty Name="ZONAS_ID" ColumnName="ZONAS_ID" />
+          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+          <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
+          <ScalarProperty Name="DISTRITO_ID" ColumnName="DISTRITO_ID" />
+          <ScalarProperty Name="PARTIDO_ID" ColumnName="PARTIDO_ID" />
+          <ScalarProperty Name="DESCRIPCION_PARTIDO" ColumnName="DESCRIPCION_PARTIDO" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+          <ScalarProperty Name="ZONA_UNIFICADA" ColumnName="ZONA_UNIFICADA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

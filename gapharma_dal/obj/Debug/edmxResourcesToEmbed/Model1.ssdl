@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gapharmaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'gapharma.dbo.BITACORA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="BITACORA">
+    <Key>
+      <PropertyRef Name="BITACORA_ID" />
+    </Key>
+    <Property Name="BITACORA_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USUARIO_ID" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="MENSAJE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CABECERA_DOCUMENTO">
+    <Key>
+      <PropertyRef Name="CABECERA_DOCUMENTO_ID" />
+    </Key>
+    <Property Name="CABECERA_DOCUMENTO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA_EMISION" Type="date" Nullable="false" />
+    <Property Name="FECHA_ENVIO" Type="date" Nullable="false" />
+    <Property Name="FECHA_RETIRO" Type="date" Nullable="false" />
+    <Property Name="CLIENTE_ID" Type="int" Nullable="false" />
+    <Property Name="DESTINATARIO_ID" Type="int" Nullable="false" />
+    <Property Name="ESTADO_ID" Type="int" Nullable="false" />
+    <Property Name="SERVICIO_ID" Type="int" Nullable="false" />
+    <Property Name="EMPRESA_ID" Type="int" Nullable="false" />
+    <Property Name="TIPO_DOCUMENTO_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="CLIENTE_ID" />
+    </Key>
+    <Property Name="CLIENTE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RAZONSOCIAL" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ESTADO_ID" Type="int" />
+    <Property Name="USUARIO_ID" Type="int" />
+    <Property Name="EMPRESA_ID" Type="int" />
+    <Property Name="PERSONA_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'gapharma.dbo.CLIENTE_DESTINATARIO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CLIENTE_DESTINATARIO">
+    <Key>
+      <PropertyRef Name="CLIENTE_ID" />
+      <PropertyRef Name="DESTINATARIO_ID" />
+    </Key>
+    <Property Name="CLIENTE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESTINATARIO_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DESTINATARIO">
+    <Key>
+      <PropertyRef Name="DESTINATARIO_ID" />
+    </Key>
+    <Property Name="DESTINATARIO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RAZON_SOCIAL" Type="varchar" MaxLength="150" />
+    <Property Name="DIRECCION_ENTREGA" Type="varchar" MaxLength="150" />
+    <Property Name="CODIGO_POSTAL" Type="int" />
+    <Property Name="CLIENTE_ID" Type="int" />
+    <Property Name="PERSONA_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_DOCUMENTO">
+    <Key>
+      <PropertyRef Name="DETALLE_DOCUMENTO_ID" />
+    </Key>
+    <Property Name="DETALLE_DOCUMENTO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CABECERA_DOCUMENTO_ID" Type="int" Nullable="false" />
+    <Property Name="PAQUETE_ID" Type="int" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="EMPLEADO_ID" />
+    </Key>
+    <Property Name="EMPLEADO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RAZON_SOCIAL" Type="varchar" MaxLength="50" />
+    <Property Name="AREA_ID" Type="int" />
+    <Property Name="USUARIO_ID" Type="int" />
+    <Property Name="HABILITADO" Type="int" Nullable="false" />
+    <Property Name="EMPRESA_ID" Type="int" />
+    <Property Name="PERSONA_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPRESA">
+    <Key>
+      <PropertyRef Name="EMPRESA_ID" />
+    </Key>
+    <Property Name="EMPRESA_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RAZON_SOCIAL" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CUIL" Type="int" Nullable="false" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TELEFONO1" Type="int" Nullable="false" />
+    <Property Name="TELEFONO2" Type="int" Nullable="false" />
+    <Property Name="LOCALIDAD" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CIUDAD" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO">
+    <Key>
+      <PropertyRef Name="ESTADO_ID" />
+    </Key>
+    <Property Name="ESTADO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIPO_ESTADO" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="HOJA_DE_RUTA">
+    <Key>
+      <PropertyRef Name="HOJA_DE_RUTA_ID" />
+    </Key>
+    <Property Name="HOJA_DE_RUTA_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TRANSPORTISTA_ID" Type="int" />
+    <Property Name="TIPO_DE_CARGA_ID" Type="int" />
+    <Property Name="VEHICULO_ID" Type="int" />
+    <Property Name="RUTA_ID" Type="int" />
+    <Property Name="ESTADO_ID" Type="int" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="HORA_INICIO" Type="datetime" />
+    <Property Name="HORA_FIN" Type="datetime" />
+    <Property Name="KM_INICIO" Type="float" />
+    <Property Name="KM_FIN" Type="float" />
+    <Property Name="KM_RECORRIDOS" Type="float" />
+    <Property Name="ORDEN_DEL_ENVIO" Type="int" />
+  </EntityType>
+  <EntityType Name="LUGAR_DE_ENTREGA">
+    <Key>
+      <PropertyRef Name="LUGAR_ENTREGA_ID" />
+    </Key>
+    <Property Name="LUGAR_ENTREGA_ID" Type="int" Nullable="false" />
+    <Property Name="CABECERA_DOCUMENTO_ID" Type="int" />
+    <Property Name="FECHA" Type="date" />
+  </EntityType>
+  <EntityType Name="MARCA_MODELO">
+    <Key>
+      <PropertyRef Name="MARCA_MODELO_ID" />
+    </Key>
+    <Property Name="MARCA_MODELO_ID" Type="int" Nullable="false" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MODELO" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PAQUETE">
+    <Key>
+      <PropertyRef Name="PAQUETE_ID" />
+    </Key>
+    <Property Name="PAQUETE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PESO" Type="float" Nullable="false" />
+    <Property Name="ALTO" Type="float" Nullable="false" />
+    <Property Name="ANCHO" Type="float" Nullable="false" />
+    <Property Name="PROFUNDIDAD" Type="float" Nullable="false" />
+    <Property Name="TIPO_DE_CARGA_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="PERMISO">
+    <Key>
+      <PropertyRef Name="PERMISO_ID" />
+    </Key>
+    <Property Name="PERMISO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'gapharma.dbo.PERMISO_USUARIO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="PERMISO_USUARIO">
+    <Key>
+      <PropertyRef Name="PERMISO_ID" />
+      <PropertyRef Name="USUARIO_ID" />
+    </Key>
+    <Property Name="PERMISO_ID" Type="int" Nullable="false" />
+    <Property Name="USUARIO_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="PERSONA_ID" />
+    </Key>
+    <Property Name="PERSONA_ID" Type="int" Nullable="false" />
+    <Property Name="DNI" Type="int" />
+    <Property Name="CUIL" Type="int" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="50" />
+    <Property Name="CIUDAD" Type="varchar" MaxLength="50" />
+    <Property Name="LOCALIDAD" Type="varchar" MaxLength="50" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="APELLIDO" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="TELEFONO_1" Type="int" />
+    <Property Name="TELEFONO_2" Type="int" />
+    <Property Name="CODIGO_POSTAL" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'gapharma.dbo.ROL' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="ROL">
+          <Property Name="ROL_ID" Type="int" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="RUTA">
+    <Key>
+      <PropertyRef Name="RUTA_ID" />
+    </Key>
+    <Property Name="RUTA_ID" Type="int" Nullable="false" />
+    <Property Name="LUGAR_ENTREGA_ID" Type="int" />
+    <Property Name="ESTADO_ID" Type="int" />
+    <Property Name="HOJA_DE_RUTA_ID" Type="int" Nullable="false" />
+    <Property Name="TIPO_RUTA_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="SERVICIO">
+    <Key>
+      <PropertyRef Name="SERVICIO_ID" />
+    </Key>
+    <Property Name="SERVICIO_ID" Type="int" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ESTADO_ID" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'gapharma.dbo.TIPO_DE_CARGA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TIPO_DE_CARGA">
+    <Key>
+      <PropertyRef Name="TIPO_DE_CARGA_ID" />
+    </Key>
+    <Property Name="TIPO_DE_CARGA_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+    <Property Name="REFRIGERADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="TIPO_DOCUMENTO">
+    <Key>
+      <PropertyRef Name="TIPO_DOCUMENTO_ID" />
+    </Key>
+    <Property Name="TIPO_DOCUMENTO_ID" Type="int" Nullable="false" />
+    <Property Name="DESCRIPICION" Type="varchar" MaxLength="100" />
+    <Property Name="AFECTA_STOCK" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'gapharma.dbo.TIPO_RUTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TIPO_RUTA">
+    <Key>
+      <PropertyRef Name="TIPO_RUTA_ID" />
+    </Key>
+    <Property Name="TIPO_RUTA_ID" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TIPO_VEHICULO">
+    <Key>
+      <PropertyRef Name="TIPO_VEHICULO_ID" />
+    </Key>
+    <Property Name="TIPO_VEHICULO_ID" Type="int" Nullable="false" />
+    <Property Name="TIPO_VEHICULO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TRANSPORTISTA">
+    <Key>
+      <PropertyRef Name="TRANSPORTISTA_ID" />
+    </Key>
+    <Property Name="TRANSPORTISTA_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMPLEADO_ID" Type="int" />
+    <Property Name="NUM_LIC_CONVENCIONAL" Type="int" Nullable="false" />
+    <Property Name="FECHA_VENCIMIENTO_LIC_CONVENCIONAL" Type="date" Nullable="false" />
+    <Property Name="NUM_LIC_CAMIONEROS" Type="int" Nullable="false" />
+    <Property Name="FECHA_VENCIMIENTO_LIC_CAMIONEROS" Type="date" Nullable="false" />
+    <Property Name="VEHICULO_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="USUARIO_ID" />
+    </Key>
+    <Property Name="USUARIO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="50" />
+    <Property Name="HABILITADO" Type="int" />
+    <Property Name="USUARIO_ROL_ID" Type="int" />
+    <Property Name="FECHA_ALTA" Type="datetime" />
+    <Property Name="ERROR_CONTRASEÑA" Type="int" />
+    <Property Name="EMPRESA_ID" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'gapharma.dbo.USUARIO_ROL' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="USUARIO_ROL">
+          <Property Name="TIPO_USUARIO_ID" Type="int" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+          <Property Name="ROL" Type="int" />
+        </EntityType>-->
+  <EntityType Name="VEHICULO">
+    <Key>
+      <PropertyRef Name="VEHICULO_ID" />
+    </Key>
+    <Property Name="VEHICULO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIPO_VEHICULO_ID" Type="int" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" />
+    <Property Name="MODELO" Type="varchar" MaxLength="50" />
+    <Property Name="CAPACIDAD_TOTAL" Type="float" />
+    <Property Name="PATENTE" Type="varchar" MaxLength="50" />
+    <Property Name="KM_ACTUAL" Type="float" />
+    <Property Name="ESTADO_ID" Type="int" />
+    <Property Name="ZONAS_ID" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="ZONAS">
+    <Key>
+      <PropertyRef Name="ZONAS_ID" />
+    </Key>
+    <Property Name="ZONAS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODIGO_POSTAL" Type="int" />
+    <Property Name="LOCALIDAD" Type="varchar" MaxLength="100" />
+    <Property Name="DISTRITO_ID" Type="int" />
+    <Property Name="PARTIDO_ID" Type="int" />
+    <Property Name="DESCRIPCION_PARTIDO" Type="varchar" MaxLength="100" />
+    <Property Name="HABILITADO" Type="bit" />
+    <Property Name="ZONA_UNIFICADA" Type="int" />
+  </EntityType>
+  <EntityContainer Name="gapharmaModelStoreContainer">
+    <EntitySet Name="CABECERA_DOCUMENTO" EntityType="Self.CABECERA_DOCUMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DESTINATARIO" EntityType="Self.DESTINATARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DETALLE_DOCUMENTO" EntityType="Self.DETALLE_DOCUMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO" EntityType="Self.ESTADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOJA_DE_RUTA" EntityType="Self.HOJA_DE_RUTA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LUGAR_DE_ENTREGA" EntityType="Self.LUGAR_DE_ENTREGA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MARCA_MODELO" EntityType="Self.MARCA_MODELO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAQUETE" EntityType="Self.PAQUETE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERMISO" EntityType="Self.PERMISO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERSONA" EntityType="Self.PERSONA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RUTA" EntityType="Self.RUTA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_DOCUMENTO" EntityType="Self.TIPO_DOCUMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_VEHICULO" EntityType="Self.TIPO_VEHICULO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRANSPORTISTA" EntityType="Self.TRANSPORTISTA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VEHICULO" EntityType="Self.VEHICULO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BITACORA" EntityType="Self.BITACORA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BITACORA].[BITACORA_ID] AS [BITACORA_ID], 
+    [BITACORA].[USUARIO_ID] AS [USUARIO_ID], 
+    [BITACORA].[FECHA] AS [FECHA], 
+    [BITACORA].[MENSAJE] AS [MENSAJE]
+    FROM [dbo].[BITACORA] AS [BITACORA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CLIENTE_DESTINATARIO" EntityType="Self.CLIENTE_DESTINATARIO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CLIENTE_DESTINATARIO].[CLIENTE_ID] AS [CLIENTE_ID], 
+    [CLIENTE_DESTINATARIO].[DESTINATARIO_ID] AS [DESTINATARIO_ID]
+    FROM [dbo].[CLIENTE_DESTINATARIO] AS [CLIENTE_DESTINATARIO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PERMISO_USUARIO" EntityType="Self.PERMISO_USUARIO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PERMISO_USUARIO].[PERMISO_ID] AS [PERMISO_ID], 
+    [PERMISO_USUARIO].[USUARIO_ID] AS [USUARIO_ID]
+    FROM [dbo].[PERMISO_USUARIO] AS [PERMISO_USUARIO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TIPO_DE_CARGA" EntityType="Self.TIPO_DE_CARGA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TIPO_DE_CARGA].[TIPO_DE_CARGA_ID] AS [TIPO_DE_CARGA_ID], 
+    [TIPO_DE_CARGA].[DESCRIPCION] AS [DESCRIPCION], 
+    [TIPO_DE_CARGA].[REFRIGERADO] AS [REFRIGERADO]
+    FROM [dbo].[TIPO_DE_CARGA] AS [TIPO_DE_CARGA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TIPO_RUTA" EntityType="Self.TIPO_RUTA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TIPO_RUTA].[TIPO_RUTA_ID] AS [TIPO_RUTA_ID], 
+    [TIPO_RUTA].[DESCRIPCION] AS [DESCRIPCION]
+    FROM [dbo].[TIPO_RUTA] AS [TIPO_RUTA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ZONAS" EntityType="Self.ZONAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ZONAS].[ZONAS_ID] AS [ZONAS_ID], 
+    [ZONAS].[CODIGO_POSTAL] AS [CODIGO_POSTAL], 
+    [ZONAS].[LOCALIDAD] AS [LOCALIDAD], 
+    [ZONAS].[DISTRITO_ID] AS [DISTRITO_ID], 
+    [ZONAS].[PARTIDO_ID] AS [PARTIDO_ID], 
+    [ZONAS].[DESCRIPCION_PARTIDO] AS [DESCRIPCION_PARTIDO], 
+    [ZONAS].[HABILITADO] AS [HABILITADO], 
+    [ZONAS].[ZONA_UNIFICADA] AS [ZONA_UNIFICADA]
+    FROM [dbo].[ZONAS] AS [ZONAS]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
