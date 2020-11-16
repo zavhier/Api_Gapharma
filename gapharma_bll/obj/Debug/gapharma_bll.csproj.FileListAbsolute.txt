@@ -1,0 +1,14 @@
+C:\JM\PITU\Api_Gapharma\gapharma_bll\obj\Debug\gapharma_bll.csprojAssemblyReference.cache
+C:\JM\PITU\Api_Gapharma\gapharma_bll\obj\Debug\gapharma_bll.csproj.CoreCompileInputs.cache
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\gapharma_bll.dll
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\gapharma_bll.pdb
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\gapharma_dal.dll
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\gapharma_models.dll
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\EntityFramework.dll
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\gapharma_models.pdb
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\gapharma_dal.pdb
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\gapharma_dal.dll.config
+C:\JM\PITU\Api_Gapharma\gapharma_bll\bin\Debug\EntityFramework.xml
+C:\JM\PITU\Api_Gapharma\gapharma_bll\obj\Debug\gapharma_bll.csproj.CopyComplete
+C:\JM\PITU\Api_Gapharma\gapharma_bll\obj\Debug\gapharma_bll.dll
+C:\JM\PITU\Api_Gapharma\gapharma_bll\obj\Debug\gapharma_bll.pdb

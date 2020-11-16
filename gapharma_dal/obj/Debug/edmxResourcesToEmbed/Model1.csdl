@@ -136,8 +136,8 @@
       <PropertyRef Name="PERSONA_ID" />
     </Key>
     <Property Name="PERSONA_ID" Type="Int32" Nullable="false" />
-    <Property Name="DNI" Type="Int32" />
-    <Property Name="CUIL" Type="Int32" />
+    <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="LOCALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -261,45 +261,31 @@
     <Property Name="TIPO_RUTA_ID" Type="Int32" Nullable="false" />
     <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="ZONA">
-    <Key>
-      <PropertyRef Name="ZONAS_ID" />
-    </Key>
-    <Property Name="ZONAS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CODIGO_POSTAL" Type="Int32" />
-    <Property Name="LOCALIDAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="DISTRITO_ID" Type="Int32" />
-    <Property Name="PARTIDO_ID" Type="Int32" />
-    <Property Name="DESCRIPCION_PARTIDO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="HABILITADO" Type="Boolean" />
-    <Property Name="ZONA_UNIFICADA" Type="Int32" />
-  </EntityType>
-  <EntityContainer Name="gapharmaEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="gapharmaEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CABECERA_DOCUMENTO" EntityType="Self.CABECERA_DOCUMENTO" />
-    <EntitySet Name="CLIENTEs" EntityType="Self.CLIENTE" />
-    <EntitySet Name="DESTINATARIOs" EntityType="Self.DESTINATARIO" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+    <EntitySet Name="DESTINATARIO" EntityType="Self.DESTINATARIO" />
     <EntitySet Name="DETALLE_DOCUMENTO" EntityType="Self.DETALLE_DOCUMENTO" />
-    <EntitySet Name="EMPLEADOes" EntityType="Self.EMPLEADO" />
-    <EntitySet Name="EMPRESAs" EntityType="Self.EMPRESA" />
-    <EntitySet Name="ESTADOes" EntityType="Self.ESTADO" />
+    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" />
+    <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" />
+    <EntitySet Name="ESTADO" EntityType="Self.ESTADO" />
     <EntitySet Name="HOJA_DE_RUTA" EntityType="Self.HOJA_DE_RUTA" />
     <EntitySet Name="LUGAR_DE_ENTREGA" EntityType="Self.LUGAR_DE_ENTREGA" />
     <EntitySet Name="MARCA_MODELO" EntityType="Self.MARCA_MODELO" />
-    <EntitySet Name="PAQUETEs" EntityType="Self.PAQUETE" />
-    <EntitySet Name="PERMISOes" EntityType="Self.PERMISO" />
-    <EntitySet Name="PERSONAs" EntityType="Self.PERSONA" />
-    <EntitySet Name="RUTAs" EntityType="Self.RUTA" />
-    <EntitySet Name="SERVICIOs" EntityType="Self.SERVICIO" />
+    <EntitySet Name="PAQUETE" EntityType="Self.PAQUETE" />
+    <EntitySet Name="PERMISO" EntityType="Self.PERMISO" />
+    <EntitySet Name="PERSONA" EntityType="Self.PERSONA" />
+    <EntitySet Name="RUTA" EntityType="Self.RUTA" />
+    <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" />
     <EntitySet Name="TIPO_DOCUMENTO" EntityType="Self.TIPO_DOCUMENTO" />
     <EntitySet Name="TIPO_VEHICULO" EntityType="Self.TIPO_VEHICULO" />
-    <EntitySet Name="TRANSPORTISTAs" EntityType="Self.TRANSPORTISTA" />
-    <EntitySet Name="USUARIOs" EntityType="Self.USUARIO" />
-    <EntitySet Name="VEHICULOes" EntityType="Self.VEHICULO" />
-    <EntitySet Name="BITACORAs" EntityType="Self.BITACORA" />
+    <EntitySet Name="TRANSPORTISTA" EntityType="Self.TRANSPORTISTA" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <EntitySet Name="VEHICULO" EntityType="Self.VEHICULO" />
+    <EntitySet Name="BITACORA" EntityType="Self.BITACORA" />
     <EntitySet Name="CLIENTE_DESTINATARIO" EntityType="Self.CLIENTE_DESTINATARIO" />
     <EntitySet Name="PERMISO_USUARIO" EntityType="Self.PERMISO_USUARIO" />
     <EntitySet Name="TIPO_DE_CARGA" EntityType="Self.TIPO_DE_CARGA" />
     <EntitySet Name="TIPO_RUTA" EntityType="Self.TIPO_RUTA" />
-    <EntitySet Name="ZONAS" EntityType="Self.ZONA" />
   </EntityContainer>
 </Schema>

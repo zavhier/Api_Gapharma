@@ -1,0 +1,5 @@
+C:\JM\PITU\Api_Gapharma\gapharma_models\bin\Debug\gapharma_models.dll
+C:\JM\PITU\Api_Gapharma\gapharma_models\bin\Debug\gapharma_models.pdb
+C:\JM\PITU\Api_Gapharma\gapharma_models\obj\Debug\gapharma_models.csproj.CoreCompileInputs.cache
+C:\JM\PITU\Api_Gapharma\gapharma_models\obj\Debug\gapharma_models.dll
+C:\JM\PITU\Api_Gapharma\gapharma_models\obj\Debug\gapharma_models.pdb

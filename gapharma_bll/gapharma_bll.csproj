@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="gapharma_dal">
+      <HintPath>..\gapharma_dal\bin\Debug\gapharma_dal.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,13 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Cliente\Cliente.cs" />
+    <Compile Include="Cliente\ICliente.cs" />
+    <Compile Include="Destinatario\Destinatario.cs" />
+    <Compile Include="Pedido\IPedido.cs" />
+    <Compile Include="Pedido\Pedido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\gapharma_dal\gapharma_dal.csproj">
-      <Project>{113478c5-0555-4e90-aa68-aced75e54768}</Project>
-      <Name>gapharma_dal</Name>
-    </ProjectReference>
     <ProjectReference Include="..\gapharma_models\gapharma_models.csproj">
       <Project>{db728578-06d9-4e4e-87cf-bd04fe8416ac}</Project>
       <Name>gapharma_models</Name>

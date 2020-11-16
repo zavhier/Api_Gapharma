@@ -1,2 +1,16 @@
 C:\JM\_GAS_PROD\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csprojAssemblyReference.cache
 C:\JM\_GAS_PROD\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csproj.CoreCompileInputs.cache
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\gapharma_dal.dll.config
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\gapharma_dal.dll
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\gapharma_dal.pdb
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\EntityFramework.dll
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\gapharma_models.dll
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\EntityFramework.xml
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\JM\PITU\Api_Gapharma\gapharma_dal\bin\Debug\gapharma_models.pdb
+C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csproj.CoreCompileInputs.cache
+C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csproj.CopyComplete
+C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.dll
+C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.pdb
+C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csprojAssemblyReference.cache

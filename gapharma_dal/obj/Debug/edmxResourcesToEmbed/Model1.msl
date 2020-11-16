@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="gapharmaModelStoreContainer" CdmEntityContainer="gapharmaEntities">
+  <EntityContainerMapping StorageEntityContainer="gapharmaModelStoreContainer" CdmEntityContainer="gapharmaEntities1">
     <EntitySetMapping Name="CABECERA_DOCUMENTO">
       <EntityTypeMapping TypeName="gapharmaModel.CABECERA_DOCUMENTO">
         <MappingFragment StoreEntitySet="CABECERA_DOCUMENTO">
@@ -17,7 +17,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CLIENTEs">
+    <EntitySetMapping Name="CLIENTE">
       <EntityTypeMapping TypeName="gapharmaModel.CLIENTE">
         <MappingFragment StoreEntitySet="CLIENTE">
           <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
@@ -29,7 +29,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DESTINATARIOs">
+    <EntitySetMapping Name="DESTINATARIO">
       <EntityTypeMapping TypeName="gapharmaModel.DESTINATARIO">
         <MappingFragment StoreEntitySet="DESTINATARIO">
           <ScalarProperty Name="DESTINATARIO_ID" ColumnName="DESTINATARIO_ID" />
@@ -51,7 +51,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EMPLEADOes">
+    <EntitySetMapping Name="EMPLEADO">
       <EntityTypeMapping TypeName="gapharmaModel.EMPLEADO">
         <MappingFragment StoreEntitySet="EMPLEADO">
           <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
@@ -64,7 +64,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EMPRESAs">
+    <EntitySetMapping Name="EMPRESA">
       <EntityTypeMapping TypeName="gapharmaModel.EMPRESA">
         <MappingFragment StoreEntitySet="EMPRESA">
           <ScalarProperty Name="EMPRESA_ID" ColumnName="EMPRESA_ID" />
@@ -78,7 +78,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ESTADOes">
+    <EntitySetMapping Name="ESTADO">
       <EntityTypeMapping TypeName="gapharmaModel.ESTADO">
         <MappingFragment StoreEntitySet="ESTADO">
           <ScalarProperty Name="ESTADO_ID" ColumnName="ESTADO_ID" />
@@ -123,7 +123,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PAQUETEs">
+    <EntitySetMapping Name="PAQUETE">
       <EntityTypeMapping TypeName="gapharmaModel.PAQUETE">
         <MappingFragment StoreEntitySet="PAQUETE">
           <ScalarProperty Name="PAQUETE_ID" ColumnName="PAQUETE_ID" />
@@ -136,7 +136,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PERMISOes">
+    <EntitySetMapping Name="PERMISO">
       <EntityTypeMapping TypeName="gapharmaModel.PERMISO">
         <MappingFragment StoreEntitySet="PERMISO">
           <ScalarProperty Name="PERMISO_ID" ColumnName="PERMISO_ID" />
@@ -144,7 +144,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PERSONAs">
+    <EntitySetMapping Name="PERSONA">
       <EntityTypeMapping TypeName="gapharmaModel.PERSONA">
         <MappingFragment StoreEntitySet="PERSONA">
           <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
@@ -162,7 +162,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="RUTAs">
+    <EntitySetMapping Name="RUTA">
       <EntityTypeMapping TypeName="gapharmaModel.RUTA">
         <MappingFragment StoreEntitySet="RUTA">
           <ScalarProperty Name="RUTA_ID" ColumnName="RUTA_ID" />
@@ -173,7 +173,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SERVICIOs">
+    <EntitySetMapping Name="SERVICIO">
       <EntityTypeMapping TypeName="gapharmaModel.SERVICIO">
         <MappingFragment StoreEntitySet="SERVICIO">
           <ScalarProperty Name="SERVICIO_ID" ColumnName="SERVICIO_ID" />
@@ -200,7 +200,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TRANSPORTISTAs">
+    <EntitySetMapping Name="TRANSPORTISTA">
       <EntityTypeMapping TypeName="gapharmaModel.TRANSPORTISTA">
         <MappingFragment StoreEntitySet="TRANSPORTISTA">
           <ScalarProperty Name="TRANSPORTISTA_ID" ColumnName="TRANSPORTISTA_ID" />
@@ -213,7 +213,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="USUARIOs">
+    <EntitySetMapping Name="USUARIO">
       <EntityTypeMapping TypeName="gapharmaModel.USUARIO">
         <MappingFragment StoreEntitySet="USUARIO">
           <ScalarProperty Name="USUARIO_ID" ColumnName="USUARIO_ID" />
@@ -227,7 +227,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="VEHICULOes">
+    <EntitySetMapping Name="VEHICULO">
       <EntityTypeMapping TypeName="gapharmaModel.VEHICULO">
         <MappingFragment StoreEntitySet="VEHICULO">
           <ScalarProperty Name="VEHICULO_ID" ColumnName="VEHICULO_ID" />
@@ -242,7 +242,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="BITACORAs">
+    <EntitySetMapping Name="BITACORA">
       <EntityTypeMapping TypeName="gapharmaModel.BITACORA">
         <MappingFragment StoreEntitySet="BITACORA">
           <ScalarProperty Name="BITACORA_ID" ColumnName="BITACORA_ID" />
@@ -282,20 +282,6 @@
         <MappingFragment StoreEntitySet="TIPO_RUTA">
           <ScalarProperty Name="TIPO_RUTA_ID" ColumnName="TIPO_RUTA_ID" />
           <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ZONAS">
-      <EntityTypeMapping TypeName="gapharmaModel.ZONA">
-        <MappingFragment StoreEntitySet="ZONAS">
-          <ScalarProperty Name="ZONAS_ID" ColumnName="ZONAS_ID" />
-          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
-          <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
-          <ScalarProperty Name="DISTRITO_ID" ColumnName="DISTRITO_ID" />
-          <ScalarProperty Name="PARTIDO_ID" ColumnName="PARTIDO_ID" />
-          <ScalarProperty Name="DESCRIPCION_PARTIDO" ColumnName="DESCRIPCION_PARTIDO" />
-          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
-          <ScalarProperty Name="ZONA_UNIFICADA" ColumnName="ZONA_UNIFICADA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

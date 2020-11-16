@@ -15,16 +15,16 @@ namespace gapharma_models
     public partial class PERSONA
     {
         public int PERSONA_ID { get; set; }
-        public Nullable<int> DNI { get; set; }
-        public Nullable<int> CUIL { get; set; }
+        public string DNI { get; set; }
+        public string CUIL { get; set; }
         public string DIRECCION { get; set; }
         public string CIUDAD { get; set; }
         public string LOCALIDAD { get; set; }
         public string NOMBRE { get; set; }
         public string APELLIDO { get; set; }
         public string EMAIL { get; set; }
-        public Nullable<int> TELEFONO_1 { get; set; }
-        public Nullable<int> TELEFONO_2 { get; set; }
-        public Nullable<int> CODIGO_POSTAL { get; set; }
+        public  int TELEFONO_1 { get; set; }
+        public  int TELEFONO_2 { get; set; }
+        public int CODIGO_POSTAL { get; set; }
     }
 }
