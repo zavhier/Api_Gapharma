@@ -74,7 +74,9 @@ namespace gapharma_bll.Pedido
 
         public void save(CABECERA_DOCUMENTO obj)
         {
-            throw new NotImplementedException();
+            obj.FECHA_EMISION = DateTime.Now;
+            sPedido.save(obj);
+
         }
 
         public void update(CABECERA_DOCUMENTO obj)

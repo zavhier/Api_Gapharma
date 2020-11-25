@@ -131,23 +131,6 @@
     <Property Name="PERMISO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="PERSONA">
-    <Key>
-      <PropertyRef Name="PERSONA_ID" />
-    </Key>
-    <Property Name="PERSONA_ID" Type="Int32" Nullable="false" />
-    <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="CUIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="LOCALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="APELLIDO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="TELEFONO_1" Type="Int32" />
-    <Property Name="TELEFONO_2" Type="Int32" />
-    <Property Name="CODIGO_POSTAL" Type="Int32" />
-  </EntityType>
   <EntityType Name="RUTA">
     <Key>
       <PropertyRef Name="RUTA_ID" />
@@ -274,7 +257,6 @@
     <EntitySet Name="MARCA_MODELO" EntityType="Self.MARCA_MODELO" />
     <EntitySet Name="PAQUETE" EntityType="Self.PAQUETE" />
     <EntitySet Name="PERMISO" EntityType="Self.PERMISO" />
-    <EntitySet Name="PERSONA" EntityType="Self.PERSONA" />
     <EntitySet Name="RUTA" EntityType="Self.RUTA" />
     <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" />
     <EntitySet Name="TIPO_DOCUMENTO" EntityType="Self.TIPO_DOCUMENTO" />
@@ -287,5 +269,23 @@
     <EntitySet Name="PERMISO_USUARIO" EntityType="Self.PERMISO_USUARIO" />
     <EntitySet Name="TIPO_DE_CARGA" EntityType="Self.TIPO_DE_CARGA" />
     <EntitySet Name="TIPO_RUTA" EntityType="Self.TIPO_RUTA" />
+    <EntitySet Name="PERSONA" EntityType="gapharmaModel.PERSONA" />
   </EntityContainer>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="PERSONA_ID" />
+    </Key>
+    <Property Name="PERSONA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO_1" Type="Int32" />
+    <Property Name="TELEFONO_2" Type="Int32" />
+    <Property Name="CODIGO_POSTAL" Type="Int32" />
+  </EntityType>
 </Schema>

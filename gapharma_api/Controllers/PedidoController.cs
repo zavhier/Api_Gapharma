@@ -27,8 +27,9 @@ namespace gapharma_api.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody] string value)
+        public void Post(gapharma_models.CABECERA_DOCUMENTO value)
         {
+            sPedido.save(value);
         }
 
         // PUT api/<controller>/5

@@ -70,7 +70,20 @@ namespace gapharma_dal.Pedido
 
         public void save(CABECERA_DOCUMENTO obj)
         {
-            throw new NotImplementedException();
+            using (gapharmaEntities1 db = new gapharmaEntities1()) {
+               
+                db.CABECERA_DOCUMENTO.Add(obj);
+                db.SaveChanges();
+                int id = obj.CABECERA_DOCUMENTO_ID;
+
+                foreach (var item in obj.detalle) {
+                    item.CABECERA_DOCUMENTO_ID = id;
+                    db.DETALLE_DOCUMENTO.Add(item);
+                    db.SaveChanges();
+                }
+
+
+            }
         }
 
         public void update(CABECERA_DOCUMENTO obj)

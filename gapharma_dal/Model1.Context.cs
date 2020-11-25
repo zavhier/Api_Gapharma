@@ -37,7 +37,6 @@ namespace gapharma_models
         public virtual DbSet<MARCA_MODELO> MARCA_MODELO { get; set; }
         public virtual DbSet<PAQUETE> PAQUETE { get; set; }
         public virtual DbSet<PERMISO> PERMISO { get; set; }
-        public virtual DbSet<PERSONA> PERSONA { get; set; }
         public virtual DbSet<RUTA> RUTA { get; set; }
         public virtual DbSet<SERVICIO> SERVICIO { get; set; }
         public virtual DbSet<TIPO_DOCUMENTO> TIPO_DOCUMENTO { get; set; }
@@ -50,5 +49,6 @@ namespace gapharma_models
         public virtual DbSet<PERMISO_USUARIO> PERMISO_USUARIO { get; set; }
         public virtual DbSet<TIPO_DE_CARGA> TIPO_DE_CARGA { get; set; }
         public virtual DbSet<TIPO_RUTA> TIPO_RUTA { get; set; }
+        public virtual DbSet<PERSONA> PERSONA { get; set; }
     }
 }

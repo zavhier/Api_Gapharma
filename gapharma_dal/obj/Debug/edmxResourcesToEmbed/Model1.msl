@@ -144,24 +144,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PERSONA">
-      <EntityTypeMapping TypeName="gapharmaModel.PERSONA">
-        <MappingFragment StoreEntitySet="PERSONA">
-          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
-          <ScalarProperty Name="DNI" ColumnName="DNI" />
-          <ScalarProperty Name="CUIL" ColumnName="CUIL" />
-          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
-          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
-          <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
-          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
-          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-          <ScalarProperty Name="TELEFONO_1" ColumnName="TELEFONO_1" />
-          <ScalarProperty Name="TELEFONO_2" ColumnName="TELEFONO_2" />
-          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="RUTA">
       <EntityTypeMapping TypeName="gapharmaModel.RUTA">
         <MappingFragment StoreEntitySet="RUTA">
@@ -282,6 +264,24 @@
         <MappingFragment StoreEntitySet="TIPO_RUTA">
           <ScalarProperty Name="TIPO_RUTA_ID" ColumnName="TIPO_RUTA_ID" />
           <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONA">
+      <EntityTypeMapping TypeName="gapharmaModel.PERSONA">
+        <MappingFragment StoreEntitySet="PERSONA">
+          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+          <ScalarProperty Name="TELEFONO_2" ColumnName="TELEFONO_2" />
+          <ScalarProperty Name="TELEFONO_1" ColumnName="TELEFONO_1" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="CUIL" ColumnName="CUIL" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

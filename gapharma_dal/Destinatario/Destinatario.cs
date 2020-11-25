@@ -43,7 +43,11 @@ namespace gapharma_dal.Destinatario
 
         public void save(DESTINATARIO obj)
         {
-            throw new NotImplementedException();
+            using (gapharmaEntities1 db = new gapharmaEntities1()) {
+
+                db.DESTINATARIO.Add(obj);
+                db.SaveChanges();
+            }
         }
 
         public void update(DESTINATARIO obj)

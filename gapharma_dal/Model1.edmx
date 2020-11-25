@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="gapharmaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="gapharmaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'gapharma.dbo.BITACORA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="BITACORA">
@@ -171,7 +171,7 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.PERMISO_USUARIO' no tiene defin
           <Key>
             <PropertyRef Name="PERSONA_ID" />
           </Key>
-          <Property Name="PERSONA_ID" Type="int" Nullable="false" />
+          <Property Name="PERSONA_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DNI" Type="varchar" MaxLength="50" />
           <Property Name="CUIL" Type="varchar" MaxLength="50" />
           <Property Name="DIRECCION" Type="varchar" MaxLength="50" />
@@ -184,12 +184,6 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.PERMISO_USUARIO' no tiene defin
           <Property Name="TELEFONO_2" Type="int" />
           <Property Name="CODIGO_POSTAL" Type="int" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'gapharma.dbo.ROL' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="ROL">
-          <Property Name="ROL_ID" Type="int" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
-        </EntityType>-->
         <EntityType Name="RUTA">
           <Key>
             <PropertyRef Name="RUTA_ID" />
@@ -268,13 +262,6 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.TIPO_RUTA' no tiene definida ni
           <Property Name="ERROR_CONTRASEÑA" Type="int" />
           <Property Name="EMPRESA_ID" Type="int" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'gapharma.dbo.USUARIO_ROL' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="USUARIO_ROL">
-          <Property Name="TIPO_USUARIO_ID" Type="int" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
-          <Property Name="ROL" Type="int" />
-        </EntityType>-->
         <EntityType Name="VEHICULO">
           <Key>
             <PropertyRef Name="VEHICULO_ID" />
@@ -289,8 +276,6 @@ advertencia 6013: La tabla o vista 'gapharma.dbo.USUARIO_ROL' no tiene definida 
           <Property Name="ESTADO_ID" Type="int" />
           <Property Name="ZONAS_ID" Type="int" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityContainer Name="gapharmaModelStoreContainer">
           <EntitySet Name="CABECERA_DOCUMENTO" EntityType="Self.CABECERA_DOCUMENTO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
@@ -346,8 +331,7 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ningun
     FROM [dbo].[TIPO_RUTA] AS [TIPO_RUTA]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="gapharmaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -482,23 +466,6 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ningun
           <Property Name="PERMISO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="PERSONA">
-          <Key>
-            <PropertyRef Name="PERSONA_ID" />
-          </Key>
-          <Property Name="PERSONA_ID" Type="Int32" Nullable="false" />
-          <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="CUIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="LOCALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="APELLIDO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFONO_1" Type="Int32" />
-          <Property Name="TELEFONO_2" Type="Int32" />
-          <Property Name="CODIGO_POSTAL" Type="Int32" />
-        </EntityType>
         <EntityType Name="RUTA">
           <Key>
             <PropertyRef Name="RUTA_ID" />
@@ -625,7 +592,6 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ningun
           <EntitySet Name="MARCA_MODELO" EntityType="Self.MARCA_MODELO" />
           <EntitySet Name="PAQUETE" EntityType="Self.PAQUETE" />
           <EntitySet Name="PERMISO" EntityType="Self.PERMISO" />
-          <EntitySet Name="PERSONA" EntityType="Self.PERSONA" />
           <EntitySet Name="RUTA" EntityType="Self.RUTA" />
           <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" />
           <EntitySet Name="TIPO_DOCUMENTO" EntityType="Self.TIPO_DOCUMENTO" />
@@ -638,7 +604,25 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ningun
           <EntitySet Name="PERMISO_USUARIO" EntityType="Self.PERMISO_USUARIO" />
           <EntitySet Name="TIPO_DE_CARGA" EntityType="Self.TIPO_DE_CARGA" />
           <EntitySet Name="TIPO_RUTA" EntityType="Self.TIPO_RUTA" />
+          <EntitySet Name="PERSONA" EntityType="gapharmaModel.PERSONA" />
         </EntityContainer>
+        <EntityType Name="PERSONA">
+          <Key>
+            <PropertyRef Name="PERSONA_ID" />
+          </Key>
+          <Property Name="PERSONA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LOCALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO_1" Type="Int32" />
+          <Property Name="TELEFONO_2" Type="Int32" />
+          <Property Name="CODIGO_POSTAL" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -788,24 +772,6 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ningun
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PERSONA">
-            <EntityTypeMapping TypeName="gapharmaModel.PERSONA">
-              <MappingFragment StoreEntitySet="PERSONA">
-                <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
-                <ScalarProperty Name="DNI" ColumnName="DNI" />
-                <ScalarProperty Name="CUIL" ColumnName="CUIL" />
-                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
-                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
-                <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
-                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
-                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-                <ScalarProperty Name="TELEFONO_1" ColumnName="TELEFONO_1" />
-                <ScalarProperty Name="TELEFONO_2" ColumnName="TELEFONO_2" />
-                <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="RUTA">
             <EntityTypeMapping TypeName="gapharmaModel.RUTA">
               <MappingFragment StoreEntitySet="RUTA">
@@ -926,6 +892,24 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ningun
               <MappingFragment StoreEntitySet="TIPO_RUTA">
                 <ScalarProperty Name="TIPO_RUTA_ID" ColumnName="TIPO_RUTA_ID" />
                 <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERSONA">
+            <EntityTypeMapping TypeName="gapharmaModel.PERSONA">
+              <MappingFragment StoreEntitySet="PERSONA">
+                <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+                <ScalarProperty Name="TELEFONO_2" ColumnName="TELEFONO_2" />
+                <ScalarProperty Name="TELEFONO_1" ColumnName="TELEFONO_1" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="CUIL" ColumnName="CUIL" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

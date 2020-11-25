@@ -50,7 +50,7 @@ namespace gapharma_bll.Destinatario
 
         public void save(DESTINATARIO obj)
         {
-            throw new NotImplementedException();
+            sDestinatario.save(obj);
         }
 
         public void update(DESTINATARIO obj)

@@ -13,4 +13,3 @@ C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csproj.CoreCompileIn
 C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csproj.CopyComplete
 C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.dll
 C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.pdb
-C:\JM\PITU\Api_Gapharma\gapharma_dal\obj\Debug\gapharma_dal.csprojAssemblyReference.cache

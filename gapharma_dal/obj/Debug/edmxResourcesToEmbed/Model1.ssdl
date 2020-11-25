@@ -166,7 +166,7 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.PERMISO_USUARIO' no tiene defin
     <Key>
       <PropertyRef Name="PERSONA_ID" />
     </Key>
-    <Property Name="PERSONA_ID" Type="int" Nullable="false" />
+    <Property Name="PERSONA_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DNI" Type="varchar" MaxLength="50" />
     <Property Name="CUIL" Type="varchar" MaxLength="50" />
     <Property Name="DIRECCION" Type="varchar" MaxLength="50" />
@@ -179,12 +179,6 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.PERMISO_USUARIO' no tiene defin
     <Property Name="TELEFONO_2" Type="int" />
     <Property Name="CODIGO_POSTAL" Type="int" />
   </EntityType>
-  <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'gapharma.dbo.ROL' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="ROL">
-          <Property Name="ROL_ID" Type="int" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
-        </EntityType>-->
   <EntityType Name="RUTA">
     <Key>
       <PropertyRef Name="RUTA_ID" />
@@ -263,13 +257,6 @@ advertencia 6002: La tabla o vista 'gapharma.dbo.TIPO_RUTA' no tiene definida ni
     <Property Name="ERROR_CONTRASEÑA" Type="int" />
     <Property Name="EMPRESA_ID" Type="int" />
   </EntityType>
-  <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'gapharma.dbo.USUARIO_ROL' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="USUARIO_ROL">
-          <Property Name="TIPO_USUARIO_ID" Type="int" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
-          <Property Name="ROL" Type="int" />
-        </EntityType>-->
   <EntityType Name="VEHICULO">
     <Key>
       <PropertyRef Name="VEHICULO_ID" />
@@ -284,8 +271,6 @@ advertencia 6013: La tabla o vista 'gapharma.dbo.USUARIO_ROL' no tiene definida 
     <Property Name="ESTADO_ID" Type="int" />
     <Property Name="ZONAS_ID" Type="int" />
   </EntityType>
-  <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'gapharma.dbo.ZONAS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityContainer Name="gapharmaModelStoreContainer">
     <EntitySet Name="CABECERA_DOCUMENTO" EntityType="Self.CABECERA_DOCUMENTO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />

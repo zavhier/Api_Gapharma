@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e033e5b86a4d498ca66aff1b28b75eb5" Name="Diagram1" ZoomLevel="52">
+      <Diagram DiagramId="e033e5b86a4d498ca66aff1b28b75eb5" Name="Diagram1" ZoomLevel="59">
         <EntityTypeShape EntityType="gapharmaModel.CABECERA_DOCUMENTO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.CLIENTE" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.DESTINATARIO" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
@@ -17,7 +17,6 @@
         <EntityTypeShape EntityType="gapharmaModel.MARCA_MODELO" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.PAQUETE" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.PERMISO" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="gapharmaModel.PERSONA" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.RUTA" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.SERVICIO" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.TIPO_DOCUMENTO" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
@@ -30,6 +29,7 @@
         <EntityTypeShape EntityType="gapharmaModel.PERMISO_USUARIO" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.TIPO_DE_CARGA" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.TIPO_RUTA" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gapharmaModel.PERSONA" Width="1.5" PointX="3.375" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
