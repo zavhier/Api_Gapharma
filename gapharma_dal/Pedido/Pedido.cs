@@ -40,7 +40,8 @@ namespace gapharma_dal.Pedido
                                 Estado = est.TIPO_ESTADO,
                                 Servicio = s.DESCRIPCION,
                                 Empresa = d.RAZON_SOCIAL,
-                               Cliente_id = cd.CLIENTE_ID
+                                Cliente_id = cd.CLIENTE_ID,
+                                Codigo_postal = d.CODIGO_POSTAL
 
                             }).AsQueryable();
 

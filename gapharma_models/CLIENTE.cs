@@ -16,9 +16,9 @@ namespace gapharma_models
     {
         public int CLIENTE_ID { get; set; }
         public string RAZONSOCIAL { get; set; }
-        public Nullable<int> ESTADO_ID { get; set; }
-        public Nullable<int> USUARIO_ID { get; set; }
-        public Nullable<int> EMPRESA_ID { get; set; }
+        public int ESTADO_ID { get; set; }
+        public int USUARIO_ID { get; set; }
+        public int EMPRESA_ID { get; set; }
         public int PERSONA_ID { get; set; }
     }
 }

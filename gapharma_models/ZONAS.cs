@@ -12,13 +12,15 @@ namespace gapharma_models
     using System;
     using System.Collections.Generic;
     
-    public partial class DESTINATARIO
+    public partial class ZONAS
     {
-        public int DESTINATARIO_ID { get; set; }
-        public string RAZON_SOCIAL { get; set; }
-        public string DIRECCION_ENTREGA { get; set; }
-        public int CODIGO_POSTAL { get; set; }
-        public Nullable<int> CLIENTE_ID { get; set; }
-        public int PERSONA_ID { get; set; }
+        public int ZONAS_ID { get; set; }
+        public  int CODIGO_POSTAL { get; set; }
+        public string LOCALIDAD { get; set; }
+        public int DISTRITO_ID { get; set; }
+        public int PARTIDO_ID { get; set; }
+        public string DESCRIPCION_PARTIDO { get; set; }
+        public  bool HABILITADO { get; set; }
+        public int ZONA_UNIFICADA { get; set; }
     }
 }

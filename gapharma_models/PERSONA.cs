@@ -23,8 +23,8 @@ namespace gapharma_models
         public string NOMBRE { get; set; }
         public string APELLIDO { get; set; }
         public string EMAIL { get; set; }
-        public  int TELEFONO_1 { get; set; }
-        public  int TELEFONO_2 { get; set; }
+        public int TELEFONO_1 { get; set; }
+        public int TELEFONO_2 { get; set; }
         public int CODIGO_POSTAL { get; set; }
     }
 }

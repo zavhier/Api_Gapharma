@@ -50,5 +50,6 @@ namespace gapharma_models
         public virtual DbSet<TIPO_DE_CARGA> TIPO_DE_CARGA { get; set; }
         public virtual DbSet<TIPO_RUTA> TIPO_RUTA { get; set; }
         public virtual DbSet<PERSONA> PERSONA { get; set; }
+        public virtual DbSet<ZONAS> ZONAS { get; set; }
     }
 }

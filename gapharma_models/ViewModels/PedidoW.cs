@@ -20,5 +20,7 @@ namespace gapharma_models.ViewModels
         public   String  Empresa { get; set; }
         public int  Cliente_id { get; set; }
 
+        public int Codigo_postal { get; set; }
+
     }
 }

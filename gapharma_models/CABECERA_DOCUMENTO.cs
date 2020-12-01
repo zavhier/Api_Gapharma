@@ -24,6 +24,7 @@ namespace gapharma_models
         public int SERVICIO_ID { get; set; }
         public int EMPRESA_ID { get; set; }
         public int TIPO_DOCUMENTO_ID { get; set; }
+
         public List<DETALLE_DOCUMENTO> detalle { get; set; }
     }
 }

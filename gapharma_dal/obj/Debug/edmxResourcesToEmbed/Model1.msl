@@ -285,5 +285,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ZONAS">
+      <EntityTypeMapping TypeName="gapharmaModel.ZONAS">
+        <MappingFragment StoreEntitySet="ZONAS">
+          <ScalarProperty Name="ZONA_UNIFICADA" ColumnName="ZONA_UNIFICADA" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+          <ScalarProperty Name="DESCRIPCION_PARTIDO" ColumnName="DESCRIPCION_PARTIDO" />
+          <ScalarProperty Name="PARTIDO_ID" ColumnName="PARTIDO_ID" />
+          <ScalarProperty Name="DISTRITO_ID" ColumnName="DISTRITO_ID" />
+          <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
+          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+          <ScalarProperty Name="ZONAS_ID" ColumnName="ZONAS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

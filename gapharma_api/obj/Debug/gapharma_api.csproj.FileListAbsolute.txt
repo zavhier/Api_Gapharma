@@ -1,4 +1,3 @@
-C:\JM\PITU\Api_Gapharma\gapharma_api\obj\Debug\gapharma_api.csprojAssemblyReference.cache
 C:\JM\PITU\Api_Gapharma\gapharma_api\obj\Debug\gapharma_api.csproj.CoreCompileInputs.cache
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\gapharma_api.dll.config
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\gapharma_api.dll
@@ -24,10 +23,10 @@ C:\JM\PITU\Api_Gapharma\gapharma_api\bin\System.Web.WebPages.dll
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\System.Web.WebPages.Razor.dll
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\WebGrease.dll
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\gapharma_dal.dll
-C:\JM\PITU\Api_Gapharma\gapharma_api\bin\gapharma_models.pdb
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\EntityFramework.xml
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\EntityFramework.SqlServer.xml
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\gapharma_bll.pdb
+C:\JM\PITU\Api_Gapharma\gapharma_api\bin\gapharma_models.pdb
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\Newtonsoft.Json.xml
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\System.Net.Http.Formatting.xml
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\System.Web.Http.xml
@@ -53,6 +52,7 @@ C:\JM\PITU\Api_Gapharma\gapharma_api\bin\es\System.Web.Razor.resources.dll
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\es\System.Web.WebPages.resources.dll
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\JM\PITU\Api_Gapharma\gapharma_api\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\JM\PITU\Api_Gapharma\gapharma_api\obj\Debug\gapharma_api.csprojAssemblyReference.cache
 C:\JM\PITU\Api_Gapharma\gapharma_api\obj\Debug\gapharma_api.csproj.CopyComplete
 C:\JM\PITU\Api_Gapharma\gapharma_api\obj\Debug\gapharma_api.dll
 C:\JM\PITU\Api_Gapharma\gapharma_api\obj\Debug\gapharma_api.pdb

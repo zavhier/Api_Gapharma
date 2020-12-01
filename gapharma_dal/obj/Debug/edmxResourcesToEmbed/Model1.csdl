@@ -270,6 +270,7 @@
     <EntitySet Name="TIPO_DE_CARGA" EntityType="Self.TIPO_DE_CARGA" />
     <EntitySet Name="TIPO_RUTA" EntityType="Self.TIPO_RUTA" />
     <EntitySet Name="PERSONA" EntityType="gapharmaModel.PERSONA" />
+    <EntitySet Name="ZONAS" EntityType="gapharmaModel.ZONAS" />
   </EntityContainer>
   <EntityType Name="PERSONA">
     <Key>
@@ -287,5 +288,18 @@
     <Property Name="TELEFONO_1" Type="Int32" />
     <Property Name="TELEFONO_2" Type="Int32" />
     <Property Name="CODIGO_POSTAL" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ZONAS">
+    <Key>
+      <PropertyRef Name="ZONAS_ID" />
+    </Key>
+    <Property Name="ZONAS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_POSTAL" Type="Int32" />
+    <Property Name="LOCALIDAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DISTRITO_ID" Type="Int32" />
+    <Property Name="PARTIDO_ID" Type="Int32" />
+    <Property Name="DESCRIPCION_PARTIDO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HABILITADO" Type="Boolean" />
+    <Property Name="ZONA_UNIFICADA" Type="Int32" />
   </EntityType>
 </Schema>

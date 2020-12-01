@@ -30,6 +30,7 @@
         <EntityTypeShape EntityType="gapharmaModel.TIPO_DE_CARGA" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.TIPO_RUTA" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gapharmaModel.PERSONA" Width="1.5" PointX="3.375" PointY="10.75" />
+        <EntityTypeShape EntityType="gapharmaModel.ZONAS" Width="1.5" PointX="0.75" PointY="13.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
